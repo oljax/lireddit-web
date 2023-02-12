@@ -338,9 +338,12 @@ export const LogoutDocument = gql`
   logout
 }
     `;
-
+// in the NavBar component logout function error,
+// case we had these <LogoutMutation, LogoutMutationVariables> arguments
+// the error was saying that the loglogout function is wainting for 1 or argumenets
+// to solve this error we deleted them
 export function useLogoutMutation() {
-  return Urql.useMutation<LogoutMutation, LogoutMutationVariables>(LogoutDocument);
+  return Urql.useMutation(LogoutDocument);
 };
 export const RegisterDocument = gql`
     mutation Register($options: UserPasswordInput!) {
