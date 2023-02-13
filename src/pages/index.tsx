@@ -18,14 +18,14 @@ const Index = () => {
         variables,
     });   
 
-    if(!fetching && !data) {
-        return (
-            <div>
-                <div>you got query failed for some reason</div>
-                <div>{error?.message}</div>
-            </div>
-        )
-    }
+    // if(!fetching && !data) {
+    //     return (
+    //         <div>
+    //             <div>you got query failed for some reason</div>
+    //             <div>{error?.message}</div>
+    //         </div>
+    //     )
+    // }
     return (
        <Layout variant="regular">
         {!data && fetching? (
